@@ -1,4 +1,4 @@
-name: job_findAll_Params_Negative_3
+name: job_findAll_Params_Pagesize_Large
 
 authors:
   - Asiya Shaji
@@ -13,11 +13,11 @@ auth: Default
 
 assertions:
   - "@StatusCode == 200"
-  - "@Response.errors == true"
+  - "@Response.errors == false"
 
-severity: Minor
+severity: Major
 
-category: Negative
+category: Functional
 
 tags:
     - V2

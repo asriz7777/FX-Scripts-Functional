@@ -33,7 +33,7 @@ assertions:
     - "@Response.data.name == @Request.name"
     - "@Response.data.accountType == @Request.accountType"
     - "@Response.data.accessKey == @Request.accessKey"
-    #- "@Response.data.secretKey == EMPTY"
+    - "@Response.data.secretKey == EMPTY"
     - "@Response.data.account.id == @Request.account.id"
     #- "@Response.data.org.id == @Request.org.id"
 

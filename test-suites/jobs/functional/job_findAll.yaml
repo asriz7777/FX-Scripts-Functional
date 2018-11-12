@@ -1,4 +1,4 @@
-name: job_findAll_Params_Negative_1
+name: job_findAll
 
 authors:
   - Asiya Shaji
@@ -10,8 +10,7 @@ type: SUITE
   # - create_githubproj_abstract
   # - create_environment_abstract
   # - create_job_abstract
-
-endpoint: //jobs?page=0&pageSize=-10
+endpoint: /jobs
 
 method: GET
 
@@ -20,7 +19,6 @@ auth: Default
 assertions:
   - "@StatusCode == 200"
   - "@Response.errors == false"
-  - "@Response.data != EMPTY"
 
 #cleanup:
   #  - delete_job

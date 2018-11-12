@@ -38,7 +38,7 @@ assertions:
 cleanup:
  - delete_job
  - delete_environment
- - delete_githubproj
+ - delete_project
  - delete_githubacc
 
 severity: Major
