@@ -1,0 +1,52 @@
+name: job_update
+
+authors:
+  - Asiya Shaji
+
+type: SUITE
+
+init:
+   - create_githubacc_abstract
+   - create_project_abstract
+   - create_environment_abstract
+   - create_job_abstract
+
+endpoint: /jobs
+method: PUT
+
+auth: Default
+
+testCases:
+    - id: 1
+      body: '{
+        "projectId": "{{@create_project_abstract_Response.data.id}}",
+        "environmentId": "{{@create_environment_abstract_Response.data.id}}",
+        "jobId": "{{@create_job_abstract_Response.data.id}}",
+        "name": "UAT1",
+        "regions": "US_WEST_2",
+        "categories": ""
+      }'
+
+assertions:
+  - "@StatusCode == 200"
+  - "@Response.errors == false"
+  - "@Response.data.name == @Request.name"
+  - "@Response.data.job.id == @Request.job.id"
+  - "@Response.data.project.id == @Request.project.id"
+  - "@Response.data.environment.id == @Request.enviroment.id"
+
+cleanup:
+ - delete_job
+ - delete_environment
+ - delete_githubproj
+ - delete_githubacc
+
+severity: Major
+
+category: Functional
+
+tags:
+  - V2
+
+policies:
+  logger: DEBUG
