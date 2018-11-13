@@ -1,4 +1,4 @@
-name: create_Gitacc_abstract
+name: create_Emailacc_abstract
 
 authors:
   - Intesar Shannan Mohammed
@@ -16,11 +16,10 @@ headers:
 testCases:
   - id: 1
     body:
-      '{
-        "name": "Git-{{@Random | 6}}",
-        "accountType": "Git",
-        "accessKey": "test",
-        "secretKey": "test"
+       '{
+        "name": "Email-{{@Random | 6}}",
+        "accountType": "Email",
+        "accessKey": "test"
       }'
 
 assertions:
@@ -29,8 +28,6 @@ assertions:
   - "@Response.data.name == @Request.name"
   - "@Response.data.accountType == @Request.accountType"
   - "@Response.data.accessKey == @Request.accessKey"
-  - "@Response.data.secretKey == EMPTY"
-
 
 severity: Major
 

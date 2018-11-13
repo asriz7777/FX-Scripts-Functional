@@ -1,4 +1,4 @@
-name: create_Gitacc_abstract
+name: create_jiraaccacc_abstract
 
 authors:
   - Intesar Shannan Mohammed
@@ -17,8 +17,8 @@ testCases:
   - id: 1
     body:
       '{
-        "name": "Git-{{@Random | 6}}",
-        "accountType": "Git",
+        "name": "jira-{{@Random | 6}}",
+        "accountType": "Jira",
         "accessKey": "test",
         "secretKey": "test"
       }'
@@ -30,7 +30,6 @@ assertions:
   - "@Response.data.accountType == @Request.accountType"
   - "@Response.data.accessKey == @Request.accessKey"
   - "@Response.data.secretKey == EMPTY"
-
 
 severity: Major
 

@@ -1,10 +1,11 @@
-name: delete_githubacc
+name: delete_account_abstract
+
 authors:
   - Asiya
 
 type: ABSTRACT
 
-endpoint: /accounts/{{@create_githubacc_abstract_Response.data.id}}
+endpoint: /accounts/{{@Response.data.id}}
 
 method: DELETE
 

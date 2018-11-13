@@ -20,7 +20,6 @@ testCases:
 
      }'
 
-
 assertions:
   - "@StatusCode == 200"
   - "@Response.errors == true"
