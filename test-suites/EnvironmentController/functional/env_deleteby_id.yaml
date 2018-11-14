@@ -11,12 +11,11 @@ init:
    - create_environment_abstract
    - job_findby_projectid_abstract
    - delete_job__findby_projectid_abstract
-   #- create_job_abstract
-   #- delete_job
+
 
 endpoint: /envs/{{@create_environment_abstract_Response.data.id}}
 
-method: GET
+method: DELETE
 
 auth: Default
 
@@ -24,10 +23,9 @@ assertions:
   - "@StatusCode == 200"
   - "@Response.errors == false"
 
-#cleanup:
-  #- delete_environment
-  #- delete_project
-  #- delete_githubacc
+cleanup:
+   - delete_project
+   - delete_githubacc
 
 severity: Major
 
