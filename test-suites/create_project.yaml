@@ -35,7 +35,7 @@ assertions:
 
 cleanup:
   - delete_githubacc
-  - delete_project
+  
 
 severity: Major
 
