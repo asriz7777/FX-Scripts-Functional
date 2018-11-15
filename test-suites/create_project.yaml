@@ -34,7 +34,6 @@ assertions:
   - "@Response.data.account.id == @Request.account.id"
 
 cleanup:
-  - delete_project
   - delete_githubacc
   
 
