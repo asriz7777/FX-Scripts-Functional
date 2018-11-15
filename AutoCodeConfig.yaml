@@ -9,16 +9,18 @@ generators:
   - " OWASP - OTG-CONFIG-006"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
 - type: "sla"
   assertions:
   - "@StatusCode == 200 AND @ResponseTime < 500"
   tags: null
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
 - type: "anonymous_invalid"
   assertions:
   - "@StatusCode == 401 OR @StatusCode == 403"
@@ -26,7 +28,7 @@ generators:
   - "OWASP - OTG-AUTHN-002"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: null
     value: null
@@ -37,6 +39,7 @@ generators:
     resourceSamples: null
     queryParams: null
     bodyProperties: null
+  authors: null
 - type: "auth_invalid"
   assertions:
   - "@StatusCode == 401 OR @StatusCode == 403"
@@ -50,7 +53,7 @@ generators:
   - "OTG-AUTHN-004"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: null
     value: null
@@ -61,6 +64,7 @@ generators:
     resourceSamples: null
     queryParams: null
     bodyProperties: null
+  authors: null
 - type: "auth_invalid_empty"
   assertions:
   - "@StatusCode == 401 OR @StatusCode == 403"
@@ -74,7 +78,7 @@ generators:
   - "OTG-AUTHN-004"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: null
     value: null
@@ -85,6 +89,7 @@ generators:
     resourceSamples: null
     queryParams: null
     bodyProperties: null
+  authors: null
 - type: "auth_invalid_sql"
   assertions:
   - "@StatusCode == 401 OR @StatusCode == 403"
@@ -94,7 +99,7 @@ generators:
   - "OTG-AUTHN-004"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: null
     value: null
@@ -105,6 +110,7 @@ generators:
     resourceSamples: null
     queryParams: null
     bodyProperties: null
+  authors: null
 - type: "rbac"
   assertions:
   - "Disallowed:@StatusCode == 401 OR @StatusCode == 403"
@@ -113,7 +119,7 @@ generators:
   - "OWASP - OTG-IDENT-001 "
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: "ROLE_ADMIN,ROLE_PM,ROLE_USER"
     value: null
@@ -124,6 +130,7 @@ generators:
     resourceSamples: "Get:/api/v1/orgs/:Allowed[ROLE_ADMIN]\nPost:/api/v1/accounts/:Allowed[ROLE_ADMIN,ROLE_PM]"
     queryParams: null
     bodyProperties: null
+  authors: null
 - type: "DDOS"
   assertions:
   - "@StatusCode != 401"
@@ -132,7 +139,7 @@ generators:
   - "[PCI DSS 3.0] 6.5.2"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches:
   - name: "pageSize, page_size, maxResults, max_results"
     value: null
@@ -143,6 +150,7 @@ generators:
     resourceSamples: null
     queryParams: null
     bodyProperties: null
+  authors: null
 - type: "XSS_Injection"
   assertions:
   - "@StatusCode != 200"
@@ -156,8 +164,9 @@ generators:
   - "OWASP - OTG-INPVAL-002"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
 - type: "sql_injection_timebound"
   assertions:
   - "@ResponseTime < 7000 OR @ResponseTime > 10000"
@@ -170,8 +179,9 @@ generators:
   database:
     name: "MySQL"
     version: "5.7"
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
 - type: "log_Forging"
   assertions:
   - "@StatusCode != 200"
@@ -182,8 +192,9 @@ generators:
   - "OWASP - Log Injection"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
 - type: "invalid_datatype"
   assertions:
   - "@StatusCode != 401"
@@ -192,8 +203,9 @@ generators:
   - "OWASP - OTG-BUSLOGIC-001"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
 - type: "special_chars "
   assertions:
   - "@StatusCode != 200"
@@ -204,8 +216,9 @@ generators:
   - "OWASP - OTG-BUSLOGIC-001"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
 - type: "null_value"
   assertions:
   - "@StatusCode != 200"
@@ -216,8 +229,9 @@ generators:
   - "OWASP - OTG-BUSLOGIC-001"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
 - type: "empty_value"
   assertions:
   - "@StatusCode != 200"
@@ -227,8 +241,9 @@ generators:
   tags: null
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
 - type: "negative_number"
   assertions:
   - "@StatusCode != 401"
@@ -237,8 +252,9 @@ generators:
   - "OWASP - OTG-BUSLOGIC-001"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
 - type: "create"
   assertions:
   - "@StatusCode != 200"
@@ -249,5 +265,6 @@ generators:
   - " OWASP - OTG-CONFIG-006"
   severity: null
   database: null
-  inactive: false
+  inactive: true
   matches: []
+  authors: null
