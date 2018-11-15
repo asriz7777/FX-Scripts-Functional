@@ -10,6 +10,8 @@ init:
   - create_project_abstract
   - create_environment_abstract
 
+
+
 endpoint: /jobs
 
 method: POST
@@ -35,6 +37,7 @@ assertions:
   - "@Response.data.project.id == @Request.project.id"
 
 cleanup:
+ - delete_job__findby_projectid_abstract
  - delete_environment
  - delete_project
  - delete_githubacc

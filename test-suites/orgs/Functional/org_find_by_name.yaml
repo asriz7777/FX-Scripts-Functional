@@ -1,0 +1,27 @@
+name: org_find_by_name
+
+authors:
+  - Asiya Shaji
+
+type: SUITE
+
+endpoint: /orgs/find-by-name/FxLabs
+
+method: GET
+
+auth: Default
+
+assertions:
+  - "@StatusCode == 200"
+  - "@Response.errors == false"
+  - "@Response.data != EMPTY"
+
+severity: Major
+
+category: Functional
+
+tags:
+    - V2
+
+policies:
+    logger: DEBUG
