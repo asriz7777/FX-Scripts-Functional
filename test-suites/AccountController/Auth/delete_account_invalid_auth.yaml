@@ -1,27 +1,25 @@
-name: delete_account_abstract
+name: delete_account_invalid_auth
 
 authors:
-  - Asiya
+  - Asiya Shaji
 
-type: ABSTRACT
+type: SUITE
 
 endpoint: /accounts/{{@Response.data.id}}
 
 method: DELETE
 
-auth: Default
+auth: None
 
 headers:
 - 'Content-Type: application/json'
 
 assertions:
-    - "@StatusCode == 200"
-    - "@Response.errors == false"
-
+- "@StatusCode == 401"
 
 severity: Major
 
-category: Functional
+category: UnSecured
 
 tags:
 - V2

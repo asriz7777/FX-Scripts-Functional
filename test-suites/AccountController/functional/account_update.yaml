@@ -13,6 +13,8 @@ endpoint: /accounts/{{@create_githubacc_abstract_Response.data.id}}
 
 method: PUT
 
+auth: Default
+
 headers:
 - 'Content-Type: application/json'
 

@@ -9,6 +9,8 @@ endpoint: /jobs/{{@job_findby_projectid_abstract_Response.data[0].id}}
 
 method: DELETE
 
+auth: Default
+
 headers:
 - 'Content-Type: application/json'
 

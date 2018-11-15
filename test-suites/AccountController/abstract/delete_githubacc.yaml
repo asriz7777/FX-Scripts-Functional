@@ -8,6 +8,8 @@ endpoint: /accounts/{{@create_githubacc_abstract_Response.data.id}}
 
 method: DELETE
 
+auth: Default
+
 headers:
 - 'Content-Type: application/json'
 

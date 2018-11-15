@@ -12,6 +12,8 @@ endpoint: /projects
 
 method: POST
 
+auth: Default
+
 headers:
 - 'Content-Type: application/json'
 

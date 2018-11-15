@@ -10,6 +10,8 @@ endpoint: /accounts
 
 method: POST
 
+auth: Default
+
 headers:
 - 'Content-Type: application/json'
 
