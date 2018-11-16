@@ -23,8 +23,6 @@ assertions:
   - "@Response.data != EMPTY"
 
 cleanup:
-  #- delete_job
-  - delete_environment
   - delete_project
   - delete_githubacc
 
