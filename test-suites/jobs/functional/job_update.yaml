@@ -35,11 +35,11 @@ assertions:
   - "@Response.data.project.id == @Request.project.id"
   - "@Response.data.environment.id == @Request.enviroment.id"
 
-cleanup:
- - delete_job
- - delete_environment
- - delete_project
- - delete_githubacc
+#cleanup:
+ #- delete_job
+ #- delete_environment
+ #- delete_project
+ #- delete_githubacc
 
 severity: Major
 

@@ -38,10 +38,6 @@ assertions:
 
 cleanup:
  - delete_job__findby_projectid_abstract
- - delete_environment
- - delete_project
- - delete_githubacc
-
 
 severity: Major
 

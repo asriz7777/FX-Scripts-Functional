@@ -28,6 +28,9 @@ assertions:
   - "@Response.data.environment.id == @Request.enviroment.id"
   - "@Response.data.project.id == @Request.project.id"
 
+cleanup:
+ - delete_job
+ 
 severity: Major
 
 category: Functional

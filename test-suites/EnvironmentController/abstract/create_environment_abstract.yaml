@@ -15,7 +15,6 @@ testCases:
       "name": "UAT","baseUrl": "http://13.56.210.25/api/v1",
       "projectId": "{{@create_project_abstract_Response.data.id}}"}'
 
-
 assertions:
   - "@StatusCode == 200"
   - "@Response.errors == false"
@@ -24,6 +23,9 @@ assertions:
   - "@Response.data.name == @Request.name"
   - "@Response.data.url == @Request.url"
   - "@Response.data.projecct.id == @Request.project.id"
+
+cleanup:
+   - delete_environment
 
 severity: Major
 

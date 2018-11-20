@@ -23,9 +23,6 @@ assertions:
   - "@StatusCode == 200"
   - "@Response.errors == false"
 
-cleanup:
-   - delete_project
-   - delete_githubacc
 
 severity: Major
 
