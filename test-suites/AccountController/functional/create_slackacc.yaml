@@ -20,29 +20,25 @@ testCases:
     body: '{
         "name": "{{@Random | 3}}",
         "accountType": "Slack",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "secretKey": "{{@Random | 20}}"
      }'
   - id: 2
     body: '{
         "name": "Test-{{@Random | 6}}",
         "accountType": "Slack",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "secretKey": "{{@Random | 20}}"
      }'
   - id: 3
     body: '{
         "name": "Test-{{@Random | 12}}",
         "accountType": "Slack",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "secretKey": "{{@Random | 20}}"
      }'
   - id: 4
     body: '{
         "name": "Test-{{@Random | 24}}",
         "accountType": "Slack",
-        "accessKey": "testing accessKey",
-        "secretKey": "testing secretKey"
+        "secretKey": "{{@Random | 20}}"
      }'
 
 assertions:
@@ -50,12 +46,11 @@ assertions:
   - "@Response.errors == false"
   - "@Response.data.name == @Request.name"
   - "@Response.data.accountType == @Request.accountType"
-  - "@Response.data.accessKey == @Request.accessKey"
   - "@Response.data.secretKey != @Request.secretKey"
 
 cleanup:
   - delete_account
-  
+
 severity: Major
 
 category: Functional

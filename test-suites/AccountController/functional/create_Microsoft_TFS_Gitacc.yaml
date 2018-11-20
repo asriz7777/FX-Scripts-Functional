@@ -18,28 +18,28 @@ headers:
 testCases:
   - id: 1
     body: '{
-        "name": "{{@Random | 3}}",
+        "name": "TFS-{{@Random | 3}}",
         "accountType": "Git",
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey"
      }'
   - id: 2
     body: '{
-        "name": "Test-{{@Random | 6}}",
+        "name": "TFS-{{@Random | 6}}",
         "accountType": "Git",
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey"
      }'
   - id: 3
     body: '{
-        "name": "Test-{{@Random | 12}}",
+        "name": "TFS-{{@Random | 12}}",
         "accountType": "Git",
         "accessKey": "accessKey",
         "secretKey": "testing secretKey"
      }'
   - id: 4
     body: '{
-        "name": "Test-{{@Random | 24}}",
+        "name": "TFS-{{@Random | 24}}",
         "accountType": "Git",
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey"
