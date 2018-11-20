@@ -35,6 +35,7 @@ assertions:
 
 cleanup:
   - delete_project
+
 severity: Major
 
 category: Functional

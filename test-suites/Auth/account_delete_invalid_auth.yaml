@@ -1,26 +1,25 @@
-name: delete_githubacc
-authors:
-  - Asiya
+name: account_delete_invalid_auth
 
-type: ABSTRACT
+authors:
+  - Asiya Shaji
+
+type: SUITE
 
 endpoint: /accounts/{{@Response.data.id}}
 
 method: DELETE
 
-auth: Default
+auth: None
 
 headers:
 - 'Content-Type: application/json'
 
 assertions:
-    - "@StatusCode == 200"
-    - "@Response.errors == false"
-
+- "@StatusCode == 401"
 
 severity: Major
 
-category: Functional
+category: UnSecured
 
 tags:
 - V2
