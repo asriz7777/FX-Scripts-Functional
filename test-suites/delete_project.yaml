@@ -1,10 +1,11 @@
-name: delete_githubacc
+name: delete_project
+
 authors:
   - Asiya
 
 type: ABSTRACT
 
-endpoint: /accounts/{{@create_githubacc_abstract_Response.data.id}}
+endpoint: /projects/{{@Response.data.id}}
 
 method: DELETE
 
@@ -16,7 +17,6 @@ headers:
 assertions:
     - "@StatusCode == 200"
     - "@Response.errors == false"
-
 
 severity: Major
 

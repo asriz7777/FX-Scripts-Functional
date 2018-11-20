@@ -1,6 +1,7 @@
-name: create_githubacc
+name: create_BitBucketacc
 
 authors:
+  - Shoukath Ali
   - Asiya Shaji
 
 type: SUITE
@@ -17,29 +18,29 @@ headers:
 testCases:
   - id: 1
     body: '{
-        "name": "GitHub-{{@Random | 3}}",
-        "accountType": "GitHub",
+        "name": "{{@Random | 3}}",
+        "accountType": "BitBucket",
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey"
      }'
   - id: 2
     body: '{
-        "name": "GitHub-{{@Random | 6}}",
-        "accountType": "GitHub",
+        "name": "Test-{{@Random | 6}}",
+        "accountType": "BitBucket",
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey"
      }'
   - id: 3
     body: '{
-        "name": "GitHub-{{@Random | 12}}",
-        "accountType": "GitHub",
-        "accessKey": "accessKey",
+        "name": "Test-{{@Random | 12}}",
+        "accountType": "BitBucket",
+        "accessKey": "testing accessKey",
         "secretKey": "testing secretKey"
      }'
   - id: 4
     body: '{
-        "name": "GitHub-{{@Random | 24}}",
-        "accountType": "GitHub",
+        "name": "Test-{{@Random | 24}}",
+        "accountType": "BitBucket",
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey"
      }'
@@ -50,18 +51,18 @@ assertions:
   - "@Response.data.name == @Request.name"
   - "@Response.data.accountType == @Request.accountType"
   - "@Response.data.accessKey == @Request.accessKey"
-  - "@Response.data.secretKey == EMPTY"
-
+  - "@Response.data.secretKey != @Request.secretKey"
 
 cleanup:
   - account_delete
+
 
 severity: Major
 
 category: Functional
 
 tags:
-  - V2
+- V2
 
 policies:
   logger: DEBUG

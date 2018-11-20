@@ -34,8 +34,7 @@ assertions:
   - "@Response.data.account.id == @Request.account.id"
 
 cleanup:
-  - delete_githubacc
-
+  - delete_project
 severity: Major
 
 category: Functional

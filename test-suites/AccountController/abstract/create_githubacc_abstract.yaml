@@ -1,7 +1,7 @@
 name: create_githubacc_abstract
 
 authors:
-  - Asiya
+  - Asiya Shaji
 
 type: ABSTRACT
 
@@ -31,6 +31,9 @@ assertions:
     - "@Response.data.accountType == @Request.accountType"
     - "@Response.data.accessKey == @Request.accessKey"
     - "@Response.data.secretKey == EMPTY"
+
+cleanup:
+  - account_delete
 
 severity: Major
 

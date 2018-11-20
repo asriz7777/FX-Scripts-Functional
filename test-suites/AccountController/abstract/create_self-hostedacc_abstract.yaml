@@ -1,4 +1,4 @@
-name: create_jiraaccacc_abstract
+name: create_selfhostedacc_abstract
 
 authors:
   - Intesar Shannan Mohammed
@@ -19,10 +19,8 @@ testCases:
   - id: 1
     body:
       '{
-        "name": "jira-{{@Random | 6}}",
-        "accountType": "Jira",
-        "accessKey": "test",
-        "secretKey": "test"
+        "name": "selfhosted-{{@Random | 6}}",
+        "accountType": "Self_Hosted"
       }'
 
 assertions:
@@ -30,8 +28,9 @@ assertions:
   - "@Response.errors == false"
   - "@Response.data.name == @Request.name"
   - "@Response.data.accountType == @Request.accountType"
-  - "@Response.data.accessKey == @Request.accessKey"
-  - "@Response.data.secretKey == EMPTY"
+
+cleanup:
+  - account_delete
 
 severity: Major
 

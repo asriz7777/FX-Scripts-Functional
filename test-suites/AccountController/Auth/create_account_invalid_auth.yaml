@@ -106,7 +106,6 @@ testCases:
         "secretKey": "testing secretKey"
      }'
 
-
 assertions:
 - "@StatusCode == 401"
 

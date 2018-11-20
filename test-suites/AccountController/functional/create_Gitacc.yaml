@@ -1,6 +1,7 @@
-name: create_githubacc
+name: create_Gitacc
 
 authors:
+  - Shahanawaz Ali
   - Asiya Shaji
 
 type: SUITE
@@ -17,29 +18,29 @@ headers:
 testCases:
   - id: 1
     body: '{
-        "name": "GitHub-{{@Random | 3}}",
-        "accountType": "GitHub",
+        "name": "{{@Random | 3}}",
+        "accountType": "Git",
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey"
      }'
   - id: 2
     body: '{
-        "name": "GitHub-{{@Random | 6}}",
-        "accountType": "GitHub",
+        "name": "Test-{{@Random | 6}}",
+        "accountType": "Git",
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey"
      }'
   - id: 3
     body: '{
-        "name": "GitHub-{{@Random | 12}}",
-        "accountType": "GitHub",
+        "name": "Test-{{@Random | 12}}",
+        "accountType": "Git",
         "accessKey": "accessKey",
         "secretKey": "testing secretKey"
      }'
   - id: 4
     body: '{
-        "name": "GitHub-{{@Random | 24}}",
-        "accountType": "GitHub",
+        "name": "Test-{{@Random | 24}}",
+        "accountType": "Git",
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey"
      }'
@@ -51,6 +52,7 @@ assertions:
   - "@Response.data.accountType == @Request.accountType"
   - "@Response.data.accessKey == @Request.accessKey"
   - "@Response.data.secretKey == EMPTY"
+
 
 
 cleanup:

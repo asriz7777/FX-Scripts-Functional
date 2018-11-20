@@ -1,11 +1,12 @@
-name: delete_project
+#validates delete with parent id
+name: delete_account
 
 authors:
   - Asiya
 
 type: ABSTRACT
 
-endpoint: /projects/{{@Response.data.id}}
+endpoint: /accounts/{{@Response.data.id}}
 
 method: DELETE
 
@@ -17,6 +18,7 @@ headers:
 assertions:
     - "@StatusCode == 200"
     - "@Response.errors == false"
+
 
 severity: Major
 

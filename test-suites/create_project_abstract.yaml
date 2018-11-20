@@ -30,11 +30,11 @@ assertions:
   - "@Response.data.url == @Request.url"
   - "@Response.data.account.id == @Request.account.id"
 
+severity: Major
+
 
 cleanup:
-  - project_delete
-
-severity: Major
+ - delete_project
 
 category: Functional
 
