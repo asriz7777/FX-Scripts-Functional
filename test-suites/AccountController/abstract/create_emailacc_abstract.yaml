@@ -32,7 +32,7 @@ assertions:
   - "@Response.data.accessKey == @Request.accessKey"
 
 cleanup:
-  - account_delete
+  - delete_account
 
 severity: Major
 

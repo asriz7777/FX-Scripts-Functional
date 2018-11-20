@@ -33,7 +33,7 @@ assertions:
     - "@Response.data.secretKey == EMPTY"
 
 cleanup:
-  - account_delete
+  - delete_account
 
 severity: Major
 

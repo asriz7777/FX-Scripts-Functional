@@ -31,7 +31,7 @@ assertions:
   - "@Response.data.accountType == @Request.accountType"
 
 cleanup:
-  - account_delete
+  - delete_account
 
 
 severity: Major

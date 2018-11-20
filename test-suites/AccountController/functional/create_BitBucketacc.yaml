@@ -54,7 +54,7 @@ assertions:
   - "@Response.data.secretKey != @Request.secretKey"
 
 cleanup:
-  - account_delete
+  - delete_account
 
 
 severity: Major

@@ -40,7 +40,7 @@ assertions:
     #- "@Response.data.org.id == @Request.org.id"
 
 cleanup:
-   - account_delete
+   - delete_account
 
 severity: Major
 

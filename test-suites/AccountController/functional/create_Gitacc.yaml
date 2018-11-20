@@ -53,10 +53,8 @@ assertions:
   - "@Response.data.accessKey == @Request.accessKey"
   - "@Response.data.secretKey == EMPTY"
 
-
-
 cleanup:
-  - account_delete
+  - delete_account
 
 severity: Major
 
