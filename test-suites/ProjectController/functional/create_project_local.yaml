@@ -6,6 +6,9 @@ authors:
 
 type: SUITE
 
+init:
+  - create_localacc_abstract
+
 endpoint: /projects
 
 method: POST
