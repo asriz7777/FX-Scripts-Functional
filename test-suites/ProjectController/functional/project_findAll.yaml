@@ -5,7 +5,8 @@ authors:
 
 type: SUITE
 
-endpoint: /projects
+endpoint: /projects?page=0&pageSize=10
+
 method: GET
 
 auth: Default
