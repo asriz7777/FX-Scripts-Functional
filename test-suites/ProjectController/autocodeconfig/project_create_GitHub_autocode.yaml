@@ -7,6 +7,7 @@ type: SUITE
 
 init:
  - create_GitHubacc_abstract
+ - create_project_GitHub_abstract
 
 endpoint: projects/{{@create_project_GitHub_abstract_Response.data.id}}/autocodeconfig
 
@@ -22,7 +23,7 @@ testCases:
     body: '{
         "project": {"id":{{@create_project_GitHub_abstract_Response.data.id}}",
         "url": "https://github.com/asriz7777/FX_Testing-Automation",
-        "account": "{{@create_githubacc_abstract_Response.data}}"},
+        "account": "{{@create_GitHubacc_abstract_Response.data}}"},
         "openAPISpec":"http://13.56.210.25/v2/api-docs"
       }'
 
