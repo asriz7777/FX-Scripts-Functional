@@ -1,8 +1,12 @@
-name: create_environment_abstract
+name: project_addEnv_
 
-type: ABSTRACT
+type: SUITE
 
-endpoint: /envs
+init:
+  - create_GitHubacc_abstract
+  - create_project_GitHub_abstract
+
+endpoint: /projects/{{@create_project_GitHub_abstract_Response.data.id}}/env
 
 method: POST
 
@@ -13,7 +17,7 @@ testCases:
       body: '{"auths":[{"authType": "Basic","name": "Default",
       "password": "asiya@fxlabs.io","username": "ASIYA//asiya@fxlabs.io"}],
       "name": "UAT","baseUrl": "http://13.56.210.25/api/v1",
-      "projectId": "{{@create_project_GitHub_abstract_Response.data.id}}"}'
+      "projectId": "{{@create_project_abstract_Response.data.id}}"}'
 
 assertions:
   - "@StatusCode == 200"
@@ -22,7 +26,7 @@ assertions:
   - "@Response.data.username == @Request.username"
   - "@Response.data.name == @Request.name"
   - "@Response.data.url == @Request.url"
-  - "@Response.data.project.id == @Request.project.id"
+  - "@Response.data.projecct.id == @Request.project.id"
 
 cleanup:
    - delete_environment

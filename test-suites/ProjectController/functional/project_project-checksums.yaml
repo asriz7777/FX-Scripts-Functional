@@ -6,10 +6,10 @@ authors:
 type: SUITE
 
 init:
-   - create_githubacc_abstract
-   - create_project_abstract
+   - create_GitHubacc_abstract
+   - create_project_GitHub_abstract
 
-endpoint: /projects/{{@create_project_abstract_Response.data.id}}/project-checksums
+endpoint: /projects/{{@create_project_GitHub_abstract_Response.data.id}}/project-checksums
 
 method: GET
 
@@ -20,9 +20,9 @@ assertions:
   - "@Response.errors == false"
   - "@Response.data != EMPTY"
 
-cleanup:
-    - delete_project
-    - delete_githubacc
+#cleanup:
+    #- delete_project
+    #- delete_githubacc
 
 severity: Major
 

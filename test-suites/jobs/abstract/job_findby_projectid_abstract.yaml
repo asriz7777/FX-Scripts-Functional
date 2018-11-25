@@ -5,7 +5,7 @@ authors:
 
 type: ABSTRACT
 
-endpoint:  /jobs/project-id/{{@create_project_abstract_Response.data.id}}
+endpoint:  /jobs/project-id/{{@create_project_GitHub_abstract_Response.data.id}}
 
 method: GET
 

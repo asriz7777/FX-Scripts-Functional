@@ -6,8 +6,8 @@ authors:
 type: SUITE
 
 init:
-   - create_githubacc_abstract
-   - create_project_abstract
+   - create_GitHubacc_abstract
+   - create_project_GitHub_abstract
    - create_environment_abstract
    - job_findby_projectid_abstract
    - delete_job__findby_projectid_abstract
