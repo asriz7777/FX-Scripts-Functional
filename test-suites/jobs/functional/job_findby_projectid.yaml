@@ -6,7 +6,7 @@ authors:
 type: SUITE
 
 init:
-   - create_githubacc_abstract
+   - create_GitHubacc_abstract
    - create_project_GitHub_abstract
    - create_environment_abstract
    #- create_job_abstract
