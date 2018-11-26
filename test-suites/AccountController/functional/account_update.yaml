@@ -1,15 +1,15 @@
 name: account_update
 
 authors:
-  - Asiya
+  - Asiya Shaji
 
 type: SUITE
 
 init:
-  - create_githubacc_abstract
+  - create_GitHubacc_abstract
 # - create_org_abstract
 
-endpoint: /accounts/{{@create_githubacc_abstract_Response.data.id}}
+endpoint: /accounts/{{@create_GitHubacc_abstract_Response.data.id}}
 
 method: PUT
 
@@ -22,7 +22,7 @@ testCases:
    - id: 1
      body:
       '{
-        "accountId": "{{@create_githubacc_abstract_Response.data.id}}",
+        "accountId": "{{@create_GitHubacc_abstract_Response.data.id}}",
         "name": "{{@Random | 3}}",
         "accountType": "GitHub",
         "accessKey": "asriz7777",

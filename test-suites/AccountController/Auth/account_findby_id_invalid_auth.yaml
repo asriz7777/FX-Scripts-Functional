@@ -6,9 +6,9 @@ authors:
 type: SUITE
 
 init:
-   - create_githubacc_abstract
+   - create_GitHubacc_abstract
 
-endpoint: /accounts/{{@create_githubacc_abstract_Response.data.id}}
+endpoint: /accounts/{{@create_GitHubacc_abstract_Response.data.id}}
 
 method: GET
 
