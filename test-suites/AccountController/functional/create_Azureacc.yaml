@@ -1,4 +1,4 @@
-name: create_Azureacc
+name: create_AZUREacc
 
 authors:
   - Asiya Shaji
@@ -18,7 +18,7 @@ testCases:
   - id: 1
     body: '{
         "name": "{{@Random | 3}}",
-        "accountType": "Azure",
+        "accountType": "AZURE",
         "ClientID": "testing",
         "ClientSecretKey": "testing",
         "TenantID": "testing",
@@ -29,7 +29,7 @@ testCases:
   - id: 2
     body: '{
         "name": "Test-{{@Random | 6}}",
-        "accountType": "Azure",
+        "accountType": "AZURE",
         "ClientID": "testing",
         "ClientSecretKey": "testing",
         "TenantId": "testing",
