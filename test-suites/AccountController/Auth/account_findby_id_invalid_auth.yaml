@@ -19,7 +19,7 @@ assertions:
 
 severity: Critical
 
-category: Security_UnSecured
+category: UnSecured
 
 tags:
   - V2
