@@ -4,6 +4,7 @@ type: SUITE
 
 init:
  - create_GitHubacc_abstract
+ - create_project_GitHub_abstract
 
 endpoint: /envs
 
