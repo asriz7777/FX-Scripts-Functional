@@ -21,7 +21,7 @@ testCases:
         "accountType": "GCP",
         "ClientId": "testing",
         "ClientSecret": "testing",
-        "projectId": "testing",
+        "ProjectID": "testing",
         "allowedRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
         "us-west1-b","us-west1-c","us-west2-a","us-west2-b","us-west2-c"]
      }'
@@ -31,7 +31,7 @@ testCases:
           "accountType": "GCP",
           "ClientId": "testing",
           "ClientSecret": "testing",
-          "projectId": "testing",
+          "ProjectID": "testing",
           "allowedRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
           "us-west1-b","us-west1-c","us-west2-a","us-west2-b","us-west2-c"]
      }'
@@ -41,7 +41,7 @@ testCases:
           "accountType": "GCP",
           "ClientId": "testing",
           "ClientSecret": "testing",
-          "projectId": "testing",
+          "ProjectID": "testing",
           "allowedRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
           "us-west1-b","us-west1-c","us-west2-a","us-west2-b","us-west2-c"]
      }'
@@ -51,7 +51,7 @@ testCases:
           "accountType": "GCP",
           "ClientId": "testing",
           "ClientSecret": "testing",
-          "projectId": "testing",
+          "ProjectID": "testing",
           "allowedRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
           "us-west1-b","us-west1-c","us-west2-a","us-west2-b","us-west2-c"]
      }'
@@ -63,6 +63,8 @@ assertions:
   - "@Response.data.accountType == @Request.accountType"
   - "@Response.data.ClientId == @Request.CliendId"
   - "@Response.data.Clientsecret == EMPTY"
+  - "@Response.data.ProjectID == @Request.ProjectID"
+
 
 cleanup:
   - delete_account
