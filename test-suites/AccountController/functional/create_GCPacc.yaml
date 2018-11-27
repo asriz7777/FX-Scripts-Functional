@@ -22,7 +22,7 @@ testCases:
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey",
         "prop3": "projectid",
-        "availableRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
+        "allowedRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
         "us-west1-b","us-west1-c","us-west2-a","us-west2-b","us-west2-c"]
      }'
   - id: 2
@@ -32,7 +32,7 @@ testCases:
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey",
         "prop3": "projectid",
-        "availableRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
+        "allowedRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
         "us-west1-b","us-west1-c","us-west2-a","us-west2-b","us-west2-c"]
      }'
   - id: 3
@@ -42,7 +42,7 @@ testCases:
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey",
         "prop3": "projectid",
-        "availableRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
+        "allowedRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
         "us-west1-b","us-west1-c","us-west2-a","us-west2-b","us-west2-c"]
      }'
   - id: 4
@@ -52,7 +52,7 @@ testCases:
         "accessKey": "testing accessKey",
         "secretKey": "testing secretKey",
         "prop3": "projectid",
-        "availableRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
+        "allowedRegions": ["asia-east1-a","asia-east1-b","asia-east1-c","us-west1-a",
         "us-west1-b","us-west1-c","us-west2-a","us-west2-b","us-west2-c"]
      }'
 
@@ -62,7 +62,7 @@ assertions:
   - "@Response.data.name == @Request.name"
   - "@Response.data.accessKey == @Request.accessKey"
   - "@Response.data.secretKey != @Request.secretKey"
-  - "@Response.data.availableRegions != NULL"
+  - "@Response.data.allowedRegions != NULL"
   - "@Response.data.prop3 == @Request.prop3"
 
 cleanup:

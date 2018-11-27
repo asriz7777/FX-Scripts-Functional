@@ -23,7 +23,7 @@ testCases:
         "secretKey": "testing secretKey",
         "prop1": "subscriptionId",
         "prop2": "TenantId",
-        "availableRegions": ["East US","East US 2","West US","West US 2",
+        "allowedRegions": ["East US","East US 2","West US","West US 2",
         "Central US","North Central US","South Central US","West Central US"]
      }'
   - id: 2
@@ -34,7 +34,7 @@ testCases:
         "secretKey": "testing secretKey",
         "prop1": "subscriptionId",
         "prop2": "TenantId",
-        "availableRegions": ["East US","East US 2","West US","West US 2",
+        "allowedRegions": ["East US","East US 2","West US","West US 2",
         "Central US","North Central US","South Central US","West Central US"]
      }'
    - id: 3
@@ -45,7 +45,7 @@ testCases:
           "secretKey": "testing secretKey",
           "prop1": "subscriptionId",
           "prop2": "TenantId",
-          "availableRegions": ["East US","East US 2","West US","West US 2",
+          "allowedRegions": ["East US","East US 2","West US","West US 2",
           "Central US","North Central US","South Central US","West Central US"]
      }'
    - id: 4
@@ -56,7 +56,7 @@ testCases:
           "secretKey": "testing secretKey",
           "prop1": "subscriptionId",
           "prop2": "TenantId",
-          "availableRegions": ["East US","East US 2","West US","West US 2",
+          "allowedRegions": ["East US","East US 2","West US","West US 2",
           "Central US","North Central US","South Central US","West Central US"]
        }'
 
@@ -68,7 +68,7 @@ assertions:
   - "@Response.data.accountType == @Request.accountType"
   - "@Response.data.accessKey == @Request.accessKey"
   - "@Response.data.secretKey != @Request.secretKey"
-  - "@Response.data.availableRegions != NULL"
+  - "@Response.data.allowedRegions != NULL"
   - "@Response.data.prop1 == @Request.prop1"
   - "@Response.data.prop2 == @Request.prop2"
 
