@@ -19,23 +19,23 @@ testCases:
     body: '{
         "name": "{{@Random | 3}}",
         "accountType": "AZURE",
-        "ClientID": "testing",
-        "ClientSecretKey": "testing",
-        "TenantID": "testing",
-        "SubscriptionID": "testing",
-        "availableRegions": ["East-US","East-US 2","West-US","West-US 2",
-        "Central US"]
+        "accessKey": "testing accessKey",
+        "secretKey": "testing secretKey",
+        "prop1": "subscriptionId",
+        "prop2": "TenantId",
+        "availableRegions": ["East US","East US 2","West US","West US 2",
+        "Central US","North Central US","South Central US","West Central US"]
      }'
   - id: 2
     body: '{
         "name": "Test-{{@Random | 6}}",
         "accountType": "AZURE",
-        "ClientID": "testing",
-        "ClientSecretKey": "testing",
-        "TenantId": "testing",
-        "SubscriptionID": "testing",
-        "availableRegions": ["East-US","East-US 2","West-US","West-US 2",
-        "Central US"]
+        "accessKey": "testing accessKey",
+        "secretKey": "testing secretKey",
+        "prop1": "subscriptionId",
+        "prop2": "TenantId",
+        "availableRegions": ["East US","East US 2","West US","West US 2",
+        "Central US","North Central US","South Central US","West Central US"]
      }'
 
 assertions:
@@ -43,11 +43,12 @@ assertions:
   - "@Response.errors == false"
   - "@Response.data.name == @Request.name"
   - "@Response.data.accountType == @Request.accountType"
-  - "@Response.data.ClientID == @Request.CliendID"
-  - "@Response.data.ClientSecretKey == EMPTY"
-  - "@Response.data.TenantID == @Request.TenantID"
-  - "@Response.data.SubscriptionID == @Request.SubscriptionID"
-
+  - "@Response.data.accessKey == @Request.accessKey"
+  - "@Response.data.secretKey != @Request.secretKey"
+  - "@Response.data.allowedRegions != NULL"
+  - "@Response.data.prop1 == @Request.prop1"
+  - "@Response.data.prop2 == @Request.prop2"
+  
 cleanup:
   - delete_account
 
