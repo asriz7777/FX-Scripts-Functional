@@ -30,7 +30,7 @@ testCases:
     body: '{
         "name": "BitBucket-{{@Random | 6}}",
         "url": "https://github.com/asriz7777/FX-Scripts-Functional",
-        "account": "{{@create_BitBucketacc_abstractResponse.data}}"
+        "account": "{{@create_BitBucketacc_abstract_Response.data}}"
 
      }'
   - id: 3

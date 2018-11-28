@@ -68,35 +68,6 @@ testCases:
         "description": "SD-Test example",
         "account": {"id": "123"}
      }'
-  # invalid openAPISpec
-  - id: 10
-    body: '{
-        "name": "test",
-        "url": "https://github.com/intesar/Fx-Test-Data.git",
-        "account": {"id": "0"},
-        "genPolicy": "Create",
-        "openAPISpec": "",
-        "description": "SD-Test example"
-     }'
-  - id: 11
-    body: '{
-        "name": "test",
-        "url": "https://github.com/intesar/Fx-Test-Data.git",
-        "account": {"id": "0"},
-        "genPolicy": "Create",
-        "openAPISpec": " ",
-        "description": "SD-Test example"
-     }'
-  # invalid genPolicy
-  - id: 12
-    body: '{
-        "name": "test",
-        "url": "https://github.com/intesar/Fx-Test-Data.git",
-        "account": {"id": "0"},
-        "genPolicy": null,
-        "openAPISpec": "",
-        "description": "SD-Test example"
-     }'
 
 assertions:
   - "@StatusCode == 200"
