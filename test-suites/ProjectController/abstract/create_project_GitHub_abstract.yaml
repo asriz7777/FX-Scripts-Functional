@@ -22,14 +22,12 @@ testCases:
         "account": "{{@create_GitHubacc_abstract_Response.data}}"
       }'
 
-
 assertions:
   - "@StatusCode == 200"
   - "@Response.errors == false"
   - "@Response.data.name == @Request.name"
   - "@Response.data.url == @Request.url"
   - "@Response.data.account.id == @Request.account.id"
-
 
 cleanup:
   - delete_project
