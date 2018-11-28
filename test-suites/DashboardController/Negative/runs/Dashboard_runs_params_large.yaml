@@ -12,7 +12,7 @@ auth: Default
 
 assertions:
   - "@StatusCode == 200"
-  - "@Response.errors == false"
+  - "@Response.errors == true"
 
 severity: Major
 
