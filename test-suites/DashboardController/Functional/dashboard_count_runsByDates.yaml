@@ -1,9 +1,9 @@
-name: dashboard_count-runs-between
+name: dashboard_count_runsByDates
 
 authors:
   - Asiya Shaji
 
-endpoint: /dashboard/count-runs-between
+endpoint: /dashboard/count-runs-between?oct?tonov
 
 method: GET
 
@@ -18,4 +18,4 @@ severity: Major
 category: Functional
 
 tags:
-  -
+    - V2
