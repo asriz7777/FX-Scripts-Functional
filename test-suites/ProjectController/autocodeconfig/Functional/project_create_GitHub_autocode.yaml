@@ -1,4 +1,4 @@
-name: create_project_GitHub_autocode
+name: create_project_GitHub_autoCode
 
 authors:
   - Asiya
@@ -21,12 +21,10 @@ headers:
 testCases:
   - id: 1
     body: '{
-        "project": {"id":{{@create_project_GitHub_abstract_Response.data.id}}",
-        "url": "https://github.com/asriz7777/FX_Testing-Automation",
-        "account": "{{@create_GitHubacc_abstract_Response.data}}"},
-        "openAPISpec":"http://13.56.210.25/v2/api-docs"
+        "project": "{{@create_project_GitHub_abstract_Response.data}}",
+        "openAPISpec": "http://13.56.210.25/v2/api-docs",
+        "generators":  "{{@project_getCodeConfigSave_Response.data}}"
       }'
-
 
 assertions:
   - "@StatusCode == 200"
