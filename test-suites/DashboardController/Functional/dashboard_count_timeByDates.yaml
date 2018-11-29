@@ -3,7 +3,7 @@ name: dashboard_timeByDates
 authors:
   - Asiya Shaji
 
-endpoint: /dashboard/count-time?
+endpoint: /dashboard/count-time?fromDate=2018-11-01&toDate=2018-11-20
 
 method: GET
 

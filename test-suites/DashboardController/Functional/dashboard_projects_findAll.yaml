@@ -4,7 +4,7 @@ authors:
   - Intesar Shannan Mohammed
   - Asiya Shaji
 
-endpoint: /dashboard/count-projects?page=0&pageSize=10
+endpoint: /dashboard/count-projects
 
 method: GET
 

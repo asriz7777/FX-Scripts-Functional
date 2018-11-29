@@ -3,7 +3,7 @@ name: dashboard_countbugsByDates
 authors:
   - Asiya Shaji
 
-endpoint: /dashboard/count-bugs-between?
+endpoint: /dashboard/count-bugs-between?fromDate=2018-11-01&toDate=2018-11-20
 
 method: GET
 

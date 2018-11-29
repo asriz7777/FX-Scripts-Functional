@@ -3,7 +3,7 @@ name: dashboard_testsByDates
 authors:
   - Asiya Shaji
 
-endpoint: /dashboard/count-tests?
+endpoint: /dashboard/count-tests?fromDate=2018-11-01&toDate=2018-11-20
 
 method: GET
 

@@ -3,7 +3,7 @@ name: dashboard_count_BytesByDate
 authors:
   - Asiya Shaji
 
-endpoint: /dashboard/count-BytesByDate?
+endpoint: /dashboard/count-BytesByDate?fromDate=2018-11-01&toDate=2018-11-20
 
 method: GET
 
