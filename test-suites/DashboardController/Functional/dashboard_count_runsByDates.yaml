@@ -3,6 +3,8 @@ name: dashboard_count_runsByDates
 authors:
   - Asiya Shaji
 
+type: SUITE
+
 endpoint: /dashboard/count-runs-between?fromDate=2018-11-01&toDate=2018-11-20
 
 method: GET

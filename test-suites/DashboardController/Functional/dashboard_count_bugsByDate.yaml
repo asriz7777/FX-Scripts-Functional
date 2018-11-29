@@ -3,6 +3,8 @@ name: dashboard_countbugsByDates
 authors:
   - Asiya Shaji
 
+type: SUITE
+
 endpoint: /dashboard/count-bugs-between?fromDate=2018-11-01&toDate=2018-11-20
 
 method: GET

@@ -3,6 +3,8 @@ name: dashboard_count_bugs
 authors:
   - Asiya Shaji
 
+type: SUITE
+
 endpoint: /dashboard/count-bugs?page=0&pageSize=100
 
 method: GET

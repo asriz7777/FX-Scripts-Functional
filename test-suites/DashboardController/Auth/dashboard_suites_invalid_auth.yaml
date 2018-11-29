@@ -4,6 +4,8 @@ authors:
   - Intesar Shannan Mohammed
   - Asiya Shaji
 
+type: SUITE
+
 endpoint: /dashboard/count-suites
 
 method: GET

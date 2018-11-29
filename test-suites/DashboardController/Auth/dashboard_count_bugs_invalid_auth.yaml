@@ -3,6 +3,8 @@ name: dashboard_count_bugs_invalid_auth
 authors:
   - Asiya Shaji
 
+type: SUITE
+
 endpoint: /dashboard/count-bugs
 
 method: GET

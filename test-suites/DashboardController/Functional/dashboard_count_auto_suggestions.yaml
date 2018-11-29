@@ -3,6 +3,8 @@ name: dashboard_count_auto_suggestions
 authors:
   - Asiya Shaji
 
+type: SUITE
+
 endpoint: /dashboard/count-auto-suggestions
 
 method: GET
