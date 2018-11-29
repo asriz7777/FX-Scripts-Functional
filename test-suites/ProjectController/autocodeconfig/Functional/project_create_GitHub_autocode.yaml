@@ -21,9 +21,9 @@ headers:
 testCases:
   - id: 1
     body: '{
-        "project": "{{@create_project_GitHub_abstract_Response.data}}",
+        "generators":  "{{@project_getCodeConfigSave_Response.data}}",
         "openAPISpec": "http://13.56.210.25/v2/api-docs",
-        "generators":  "{{@project_getCodeConfigSave_Response.data}}"
+        "project": "{{@create_project_GitHub_abstract_Response.data}}"
       }'
 
 assertions:
