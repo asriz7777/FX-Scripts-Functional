@@ -1,4 +1,4 @@
-name: dashboard_bytes_params_negative_3
+name: dashboard_suite_params_negative_3
 
 authors:
   - Intesar Shannan Mohammed
@@ -6,7 +6,7 @@ authors:
 
 type: SUITE
 
-endpoint: /dashboard/count-bytes?page=-1&pageSize=-10
+endpoint: /dashboard/count-suites?page=-1&pageSize=-10
 
 method: GET
 

@@ -1,4 +1,4 @@
-name: dashboard_bytes_params_negative_3
+name: dashboard_time_params_large
 
 authors:
   - Intesar Shannan Mohammed
@@ -6,7 +6,7 @@ authors:
 
 type: SUITE
 
-endpoint: /dashboard/count-bytes?page=-1&pageSize=-10
+endpoint: /dashboard/count-time?page=0&pageSize=101
 
 method: GET
 
