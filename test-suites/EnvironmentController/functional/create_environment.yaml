@@ -32,7 +32,6 @@ cleanup:
   - delete_job__findby_projectid_abstract
   - delete_environment
 
-
 severity: Major
 
 category: Functional

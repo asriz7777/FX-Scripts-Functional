@@ -22,18 +22,18 @@ testCases:
   - id: 1
     body: '{
         "generators":  "{{@project_getCodeConfigSave_Response.data}}",
-        "openAPISpec": "http://13.56.210.25/v2/api-docs",
-        "project": "{{@create_project_GitHub_abstract_Response.data}}"
+        "project": "{{@create_project_GitHub_abstract_Response.data}}",
+        "openAPISpec": "http://13.56.210.25/v2/api-docs"
       }'
 
 assertions:
   - "@StatusCode == 200"
   - "@Response.errors == false"
-  - "@Response.data.name == @Request.name"
-  - "@Response.data.url == @Request.url"
-  - "@Response.data.account.id == @Request.account.id"
+  - "@Response.data.generators == @Request.generators"
+  - "@Response.data.project.id == @Request.project.id"
+  - "@Response.data.openAPISpec == @Request.openAPISpec"
 
-cleanup:
+  cleanup:
   - delete_project
 
 severity: Major

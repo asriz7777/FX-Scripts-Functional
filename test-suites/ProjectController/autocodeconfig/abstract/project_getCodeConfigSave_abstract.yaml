@@ -14,13 +14,10 @@ auth: Default
 headers:
 - 'Content-Type: application/json'
 
-
 assertions:
   - "@StatusCode == 200"
   - "@Response.errors == false"
-  - "@Response.data.name == @Request.name"
-  - "@Response.data.url == @Request.url"
-  - "@Response.data.account.id == @Request.account.id"
+  - "@Response.data != EMPTY"
 
 severity: Major
 

@@ -1,4 +1,4 @@
-name: dashboard_bug_params_large
+name: dashboard_bug_params_negative_2
 
 authors:
   - Intesar Shannan Mohammed
@@ -6,7 +6,7 @@ authors:
 
 type: SUITE
 
-endpoint: /dashboard/count-bugs?page=0&pageSize=101
+endpoint: /dashboard/count-bugs?page=1&pageSize=-10
 
 method: GET
 

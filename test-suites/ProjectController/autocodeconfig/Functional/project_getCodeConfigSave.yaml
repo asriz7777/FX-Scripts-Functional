@@ -22,11 +22,8 @@ headers:
 assertions:
   - "@StatusCode == 200"
   - "@Response.errors == false"
-  - "@Response.data.name == @Request.name"
-  - "@Response.data.url == @Request.url"
-  - "@Response.data.account.id == @Request.account.id"
-
-#cleanup:
+  - "@Response.data != EMPTY"
+  #cleanup:
  # - delete_project
 
 severity: Major
