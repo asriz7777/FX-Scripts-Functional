@@ -1,11 +1,11 @@
-name: projects_findAll
+name: projects_search
 
 authors:
   - Asiya Shaji
 
 type: SUITE
 
-endpoint: /projects?page=0&pageSize=20
+endpoint: /projects/search?page=0&pageSize=20
 
 method: GET
 
