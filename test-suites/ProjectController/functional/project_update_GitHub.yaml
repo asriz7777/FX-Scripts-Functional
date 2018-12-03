@@ -18,9 +18,9 @@ auth: Default
 testCases:
   - id: 1
     body: '{
-        "id": "{{@project_create_GitHub_abstract_Response.data.id}}",
+        "id": "{{@create_project_GitHub_abstract_Response.data.id}}",
         "org": {
-          "id": "{{@project_create_GitHub_abstract_Response_data.org.id}}"
+          "id": "{{@create_project_GitHub_abstract_Response_data.org.id}}"
         },
         "name": "GitHub-{{@Random | 6}}",
         "url": "https://github.com/asriz7777/FX_Testing-Automation",
@@ -33,6 +33,8 @@ headers:
 assertions:
   - "@StatusCode == 200"
   - "@Response.errors == false"
+  - "@Response.data != EMPTY"
+
 
 severity: Major
 
