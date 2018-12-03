@@ -15,26 +15,25 @@ method: PUT
 
 auth: Default
 
+headers:
+- 'Content-Type: application/json'
+
 testCases:
   - id: 1
     body: '{
         "id": "{{@create_project_GitHub_abstract_Response.data.id}}",
         "org": {
-          "id": "{{@create_project_GitHub_abstract_Response_data.org.id}}"
+          "id": "{{@create_project_GitHub_abstract_Response.data.org.id}}"
         },
         "name": "GitHub-{{@Random | 6}}",
         "url": "https://github.com/asriz7777/FX_Testing-Automation",
         "account": "{{@create_GitHubacc_abstract_Response.data}}"
      }'
 
-headers:
-- 'Content-Type: application/json'
-
 assertions:
   - "@StatusCode == 200"
   - "@Response.errors == false"
   - "@Response.data != EMPTY"
-
 
 severity: Major
 
