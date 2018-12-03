@@ -33,7 +33,6 @@ assertions:
 cleanup:
   - delete_account
 
-
 severity: Major
 
 category: Functional
