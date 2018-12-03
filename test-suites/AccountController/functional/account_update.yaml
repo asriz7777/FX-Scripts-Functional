@@ -21,7 +21,11 @@ headers:
 testCases:
    - id: 1
      body:
-      '{
+       '{
+        "id": "{{@create_GitHubacc_abstract_Response.data.id}}",
+        "org": {
+          "id": "{{@create_GitHubacc_abstract_Response.data.org.id}}"
+        },
         "name": "{{@Random | 3}}",
         "accountType": "GitHub",
         "accessKey": "asriz7777",
