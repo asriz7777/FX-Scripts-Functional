@@ -1,14 +1,11 @@
-name: account_findByAccountType
+name: account_findByAccountType_2
 
 authors:
   - Asiya Shaji
 
 type: SUITE
 
-#init:
-   #- create_account_abstract
-
-endpoint: /accounts/account-type/GitHub
+endpoint: /accounts/account-type/ISSUE_TRACKER
 
 method: GET
 
