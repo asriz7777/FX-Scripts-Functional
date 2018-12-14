@@ -42,7 +42,7 @@ headers:
 
 testCases:
   - id: 1
-    body: '{"name": "fn1 ln", "email": "{{@RandomAlphanumeric | 6}}@fxlabs.io", "password": "12345678", "company": "{{@RandomAlphanumeric | 9}}"}'
+    body: '{"name": "test", "email": "testing@fxlabs.io", "password": "12345678", "company": "testing"}'
   
 
 # Assertions - One or more.
